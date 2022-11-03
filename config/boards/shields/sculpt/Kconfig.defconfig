@@ -1,0 +1,21 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_SCULPT_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "sculpt"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_SCULPT_LEFT || SHIELD_SCULPT_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif
+
+CONFIG_BUILD_OUTPUT_UF2=y
