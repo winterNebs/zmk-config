@@ -12,5 +12,5 @@
 #     shield: reviung41
 #
 ---
-include:
-  - board: ferris_rev02
+board: ["seeeduino_xiao_ble"]
+shield: ["sculpt_left", "sculpt_right"]
