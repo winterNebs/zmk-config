@@ -12,7 +12,7 @@
 #define SYM     1
 #define NAV     2
 #define ADJ     3
-#define GAME     3
+#define GAME    4
 &mt {
     tapping-term-ms = <170>;
     flavor = "tap-preferred";
@@ -40,7 +40,7 @@
         combo_bls {
                 timeout-ms = <50>;
                 key-positions = <29 35>;
-                bindings = <&kp BLSH>;
+                bindings = <&kp BSLH>;
         };
     };
     conditional_layers {
