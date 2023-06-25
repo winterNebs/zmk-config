@@ -12,6 +12,7 @@
 #define SYM     1
 #define NAV     2
 #define ADJ     3
+#define GAME     3
 &mt {
     tapping-term-ms = <170>;
     flavor = "tap-preferred";
@@ -19,6 +20,29 @@
 
 / { 
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+                timeout-ms = <50>;
+                key-positions = <0 34>;
+                bindings = <&kp ESC>;
+        };
+        combo_qot {
+                timeout-ms = <50>;
+                key-positions = <19 35>;
+                bindings = <&kp SQT>;
+        };
+        combo_grv {
+                timeout-ms = <50>;
+                key-positions = <20 34>;
+                bindings = <&kp GRAVE>;
+        };
+        combo_bls {
+                timeout-ms = <50>;
+                key-positions = <29 35>;
+                bindings = <&kp BLSH>;
+        };
+    };
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -59,8 +83,16 @@
             bindings = < 
             &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10  
             &kp F11     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp F12      
-            &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      
+            &trans      &trans      &trans      &trans      &tog GAME   &trans      &trans      &trans      &trans      &trans      
                                                 &trans      &trans      &trans      &trans
+            >;
+		};
+        game_layer {
+            bindings = < 
+            &kp ESC     &kp Q     &kp W     &kp E     &kp R     &kp T     &kp Y     &kp U     &kp I     &kp O     
+            &kp LSHFT   &kp A     &kp S     &kp D     &kp F     &kp G     &kp H     &kp J     &kp K     &kp L
+            &kp LCTRL   &kp Z     &kp X     &kp C     &kp V     &kp B     &kp N     &kp M     &kp COMMA &kp DOT
+                                            &lt SYM TAB &kp SPACE   &kp BSPC    &lt NAV ENTER
             >;
 		};
         /*
