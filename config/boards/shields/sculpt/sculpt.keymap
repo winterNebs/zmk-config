@@ -37,10 +37,15 @@
                 key-positions = <20 31>;
                 bindings = <&kp GRAVE>;
         };
-        combo_bls {
+        combo_bs {
                 timeout-ms = <50>;
                 key-positions = <29 32>;
                 bindings = <&kp BSLH>;
+        };
+        combo_del {
+                timeout-ms = <50>;
+                key-positions = <10 31>;
+                bindings = <&kp DEL>;
         };
     };
     conditional_layers {
@@ -91,7 +96,7 @@
             bindings = < 
             &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7      &kp F8      &kp F9      &kp F10  
             &kp F11     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp F12      
-            &trans      &trans      &trans      &trans      &tog GAME   &trans      &trans      &trans      &trans      &trans      
+            &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &trans      &tog GAME   &trans      &trans      &trans      &trans      &trans      
                                                 &trans      &trans      &trans      &trans
             >;
 		};
